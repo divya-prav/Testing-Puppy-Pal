@@ -9,16 +9,18 @@ function App() {
   const featuredPup = puppies.find((pup) => pup.id === featPupId);
   console.log("featuredPup: ", featuredPup);
   return (
-    <div className="App">
+    <div >
+      <div data-testid ="puppy">
       {featPupId && (
         <div>
-          <h2>{featuredPup.name}</h2>
+          <h2 data-testid="name">{featuredPup.name}</h2>
           <ul>
             <li>Age: {featuredPup.age}</li>
             <li>Email: {featuredPup.email}</li>
           </ul>
         </div>
       )}
+      </div>
 
       {puppies.map((puppy) => {
         return (
